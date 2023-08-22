@@ -127,7 +127,7 @@ class JettSkill
 	public void SkillUpdraft()
 	{
 		String skillName = "상승 기류";
-		String skillExplanation = "제트가 즉시 높이 날아오릅니다.";
+		String skillExplanation = "제트가 즉시 높이 날아오릅니다!";
 		String skillType = "액티브";
 		int credit = 150;
 	}
