@@ -250,4 +250,72 @@ class ReynaSkill
 	    }
 		
 	}
+	class Phoenix
+	{
+		public String callName = "피닉스";
+		public String name = "제이미 아데예미";
+		public String nationality = "영국";
+		public String job = "타격대";
+		public String group = "레디언트";
+		public int agentNumber = 09;
+	}
+	class PhoenixSkill
+	{
+		public void SKillBlaze()
+		{
+			String skillName = "불길";
+			String skillExplanation = "화염 장벽을 장착합니다."
+					+ " 발사하면 앞으로 이동하는 여러 개의 화염을 일렬로 생성하여 시야를 차단하고 통과하는 적 플레이어에게 피해를 입히는 화염 장벽을 생성합니다."
+					+ " 발사를 길게 누르면 조준점 방향으로 장벽 궤적을 바꿉니다."
+					+ " 자신이 발사한 화염 장벽에 닿으면 HP가 회복됩니다. ";
+			String speech = "벽 올라간다!"+"벽 생성!";
+			int credit = 150;
+			int duration = 8;
+			double HealPerSecond = 6.25;
+			int damagePerSecond = 30;
+		}
+		public void SkillCurveBall()
+		{
+			String skillName = "커브볼";
+			String skillExplanation = "던지면 휘어져 날아간 후 곧 폭발하는 섬광 구슬을 장착합니다."
+					+ " 발사하면 섬광 구슬이 왼쪽으로 휘어지며 폭발합니다. 이때 구슬을 바라보는 플레이어는 전부 실명합니다."
+					+ " 보조 공격 시 섬광 구슬이 오른쪽으로 휘어집니다.";
+			String speech = "펑이요!"+"눈 조심해!"+"눈 가려라!";
+			int credit = 250;
+			double blackOutDuration = 1.1;
+			double activationTime = 0.3;
+		}
+		public void SkillHotHands(int killCount)
+		{
+			String skillName = "뜨거운 손";
+			String skillExplanation = "화염구를 장착합니다. 발사하면 일정 시간이 지나거나 땅에 닿은 후 폭발하는 화염구를 던집니다."
+					+ " 폭발하는 지점에는 일정 시간 유지되는 화염 구역이 생성되어 적에게 피해를 입힙니다."
+					+ " 자신이 던진 화염구에 닿으면 HP가 회복됩니다.";
+			String speech = "조심해!,조심하라고!";
+			if(killCount==2)
+			{
+				System.out.println("스킬을 재사용 할수있습니다.");
+			}
+			int duration = 4;
+			int damagePerSecond = 60;
+			double HealPerSecond = 12.5;
+			double flight = 1.5;
+		}
+		public void UltimateSkillRunItBack(int killCount, boolean death, boolean timeOut)
+		{
+			String skillName = "역습";
+			String skillExplanation = "즉시 피닉스의 위치에 표식을 놓습니다. 스킬 사용 도중 죽거나 지속시간이 끝나면 해당 위치에서 최대 체력으로 부활합니다.";
+			String allySpeech = "으, 좋아, 가자! (Come on, Let's go!)";
+			String enemySpeech = "장난 끝이야, 넌 죽었어! (Jokes over, You're dead!)";
+		    if(killCount==6)
+		    {
+		        System.out.println("궁극기가 충전되었습니다.");
+		        if(death||timeOut)
+		        {
+		        	System.out.println("표식이 있는 위치로 돌아갑니다.");
+		        }
+		    }
+			
+		}
+	}
 }
