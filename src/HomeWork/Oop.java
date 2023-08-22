@@ -19,15 +19,15 @@ class RazeSkill
 	public void SkillBoomRobot()
 	{
 		String skillName = "폭팔 로봇";
-		String skillExplanation = "\r\n"
-				+ "폭발 로봇을 장착합니다. 발사하면 폭발 로봇이 지면에서 일직선으로 이동하며 벽을 만나면 튕겨 나옵니다."
-				+ "폭발 로봇의 정면 원뿔형 시야 안에 적이 포착되면 해당 적에게 돌진하며 폭발해 치명적인 피해를 입힙니다.";
+		String skillExplanation = "폭발 로봇을 장착합니다. 발사하면 폭발 로봇이 지면에서 일직선으로 이동하며 벽을 만나면 튕겨 나옵니다."
+				                + "폭발 로봇의 정면 원뿔형 시야 안에 적이 포착되면 해당 적에게 돌진하며 폭발해 치명적인 피해를 입힙니다.";
 		String speech="폭탄 로봇 출동!, 가서 잡아!";
 		String skillType = "액티브";
-		int[] damage = new int[80];
-		for(int i=0;i<damage.length;i++)
+		int maxDamage= 80;
+		int[] rangeDamage = new int[80];
+		for(int i=0;i<rangeDamage.length;i++)
 		{
-			damage[i]=i+1;
+			rangeDamage[i]=i+1;
 		}
 		int duration = 5;
 		int skillHp = 60;
@@ -62,12 +62,12 @@ class RazeSkill
 				+ " 자탄은 각각의 범위 내에 있는 모든 대상에게 피해를 입힙니다.";
 		String speech= "수류탄!";
 		String skillType = "액티브";
-		int[] damage=new int[56];
-		for(int i=0;i<damage.length;i++)
+		int maxDamage = 55;
+		int[] rangeDamage=new int[56];
+		for(int i=0;i<rangeDamage.length;i++)
 		{
-			damage[i]=i+1;
+			rangeDamage[i]=i+1;
 		}
-
         if(killCount==2)
         {
         	System.out.println("스킬을 재사용 할수있습니다.");
@@ -81,10 +81,11 @@ class RazeSkill
 		String allySpeech = "파티를 열어볼까? (Here comes the Party!)";
 		String enemySpeech = "폭탄 받아라! (Fire in the Hole!)";
 		String skillType = "궁극기";
-		int[] damage = new int[151];
-		for(int i=0;i<damage.length;i++)
+		int maxDamage = 150;
+		int[] rangeDamage = new int[151];
+		for(int i=0;i<rangeDamage.length;i++)
 		{
-			damage[i]=i+1;
+			rangeDamage[i]=i+1;
 		}
 		if(killCount==8)
 		{
@@ -139,14 +140,13 @@ class JettSkill
 		String skillType = "액티브";
 		double activationWaitTime = 0.75;
 		int duration = 12;
-        int[] kill=new int[2];
         if(killCount==2)
         {
         	System.out.println("스킬을 재사용 할수있습니다.");
         }
          
 	}
-	public void UltimateSkillBladeStorm(int killCount)
+	public void UltimateSkillBladeStorm(int killCount, int kill, int shuriken)
 	{
 		String skillName = "칼날 폭풍";
 		String skillExplanation = "명중률이 높은 투척용 단검을 장착합니다. "
@@ -161,7 +161,12 @@ class JettSkill
 		int headDamage = 150;
 	    if(killCount==7)
 	    {
+	    	
 	        System.out.println("궁극기가 충전되었습니다.");
+	        if(kill>=1)
+	        {
+	        	shuriken=5;
+	        }
 	    }
 	    
 	}
