@@ -1,5 +1,21 @@
 package HomeWork;
 
+//this.name = name;
+//this.description = description;
+//this.speech = speech;
+//this.type = type;
+//this.allySpeech = allySpeech;
+//this.enemySpeech = enemySpeech;
+//this.credit = credit;
+//this.skillHp = skillHp;
+//this.duration = duration;
+//this.maxDamage = maxDamage;
+//this.minDamage = minDamage;
+//this.instantMaxDamage = instantMaxDamage;
+//this.instantMinDamage = instantMinDamage;
+//this.maxDamageAfterArming = maxDamageAfterArming;
+//this.minDamageAfterArming = minDamageAfterArming;
+//this.objectTargetDamage = objectTargetDamage;
 
 public class Oop 
 {
