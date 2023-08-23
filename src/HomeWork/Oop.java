@@ -257,7 +257,7 @@ class ReynaSkill
 		public String nationality = "영국";
 		public String job = "타격대";
 		public String group = "레디언트";
-		public int agentNumber = 09;
+		public int agentNumber = 9;
 	}
 	class PhoenixSkill
 	{
