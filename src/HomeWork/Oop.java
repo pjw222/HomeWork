@@ -16,7 +16,7 @@ class Raze
 }
 class RazeSkill
 {
-	public void SkillBoomRobot()
+	public void skillBoomRobot()
 	{
 		String skillName = "폭팔 로봇";
 		String skillExplanation = "폭발 로봇을 장착합니다. 발사하면 폭발 로봇이 지면에서 일직선으로 이동하며 벽을 만나면 튕겨 나옵니다."
@@ -33,7 +33,7 @@ class RazeSkill
 		int skillHp = 60;
 		int credit = 300;		
 	}
-	public void SkillBlastPack()
+	public void skillBlastPack()
 	{
 		String skillName = "폭팔 팩";
 		String skillExplanation ="표면에 부착되는 폭발 팩을 던집니다. 부착 후 다시 사용하면 팩이 폭발하며 적중한 대상에게 피해를 입히고 밀어냅니다.";
@@ -54,7 +54,7 @@ class RazeSkill
 		int skillHp = 20;
 		int credit = 200;		
 	}
-	public void SkillPaintShells(int killCount)
+	public void skillPaintShells(int killCount)
 	{
 		String skillName = "페인트 탄";
 		String skillExplanation = "집속탄을 장착합니다. 발사하면 집속탄을 던집니다."
@@ -74,7 +74,7 @@ class RazeSkill
         }
               
 	}
-	public void UltimateSkillShowStopper(int killCount)
+	public void ultimateSkillShowStopper(int killCount)
 	{
 		String ultimateName = "대미 장식";
 		String skillExplanation ="로켓 발사기를 장착합니다. 발사하면 충돌 시 대량의 범위 피해를 입히는 로켓을 발사합니다.";
@@ -107,13 +107,13 @@ class Jett
 }
 class JettSkill
 {
-	public void PassiveSkillDrift()
+	public void passiveSkillDrift()
 	{
 		String skillName = "표류";
 		String skillExplanation ="낙하 시 점프 버튼을 길게 누르면 활공합니다.";
 		String skillType = "패시브";
 	}
-	public void SkillCloudburst()
+	public void skillCloudburst()
 	{
 		String skillName = "연막 폭발";
 		String skillExplanation = "표면에 닿아 충격을 받으면 구름으로 팽창해 잠시 시야를 가리는 투사체를 즉시 던집니다."
@@ -124,14 +124,14 @@ class JettSkill
 		int credit = 200;
 		double duration = 4.5;
 	}
-	public void SkillUpdraft()
+	public void skillUpdraft()
 	{
 		String skillName = "상승 기류";
 		String skillExplanation = "제트가 즉시 높이 날아오릅니다!";
 		String skillType = "액티브";
 		int credit = 150;
 	}
-	public void SkillTailwind(int killCount)
+	public void skillTailwind(int killCount)
 	{
 		String skillName = "순풍";
 		String skillExplanation = "활성화 시 일정 시간 동안 돌풍을 준비합니다."
@@ -146,7 +146,7 @@ class JettSkill
         }
          
 	}
-	public void UltimateSkillBladeStorm(int killCount, int kill, int shuriken)
+	public void ultimateSkillBladeStorm(int killCount, int kill, int shuriken)
 	{
 		String skillName = "칼날 폭풍";
 		String skillExplanation = "명중률이 높은 투척용 단검을 장착합니다. "
@@ -182,7 +182,7 @@ class Reyna
 }
 class ReynaSkill
 {
-	public void PassiveSkillSoulHarvest(int kill, int killSecond)
+	public void passiveSkillSoulHarvest(int kill, int killSecond)
 	{
 		String skillName = "영혼 수확";
 		String skillExplanation = "레이나가 처치하거나 레이나에게 피해를 입고 3초 이내에 죽은 적은 3초 동안 유지되는 영혼 구슬을 남깁니다.";
@@ -192,7 +192,7 @@ class ReynaSkill
 			int soulOrbDuration = 3;
 		}		
 	}
-	public void SkillLeer()
+	public void skillLeer()
 	{
 		String skillName = "눈총";
 		String skillExplanation = "파괴 가능한 천상의 눈을 장착합니다. 활성화하면 눈을 짧게 앞으로 던집니다. 눈을 본 적은 모두 시야가 제한됩니다.";
@@ -203,7 +203,7 @@ class ReynaSkill
 		int skillHp = 100;
 		int duration = 2;
 	}
-	public void SkillDevour(int lifeDrain)
+	public void skillDevour(int lifeDrain)
 	{
 		String skillName = "포식";
 		String skillExplanation = "	\r\n"
@@ -221,7 +221,7 @@ class ReynaSkill
 			int shield = lifeDrain;
 		}
 	}
-	public void SkillDismiss()
+	public void skillDismiss()
 	{
 		String skillName = "무시";
 		String skillExplanation = "즉시 근처에 있는 영혼 구슬을 흡수하여 짧은 시간 동안 무형 상태가 됩니다. 여제 활성화 시 추가로 투명 상태가 됩니다.";
@@ -230,7 +230,7 @@ class ReynaSkill
 		int credit = 200;
 		int duration = 2;		
 	}
-	public void UltimateSkillEmpress(int killCount, int kill, int killSecond)
+	public void ultimateSkillEmpress(int killCount, int kill, int killSecond)
 	{
 		String skillName = "여제";
 		String skillExplanation = "즉시 광란 상태가 되어 사격, 장착, 재장전 속도가 크게 증가합니다."
@@ -261,7 +261,7 @@ class ReynaSkill
 	}
 	class PhoenixSkill
 	{
-		public void SKillBlaze()
+		public void sKillBlaze()
 		{
 			String skillName = "불길";
 			String skillExplanation = "화염 장벽을 장착합니다."
@@ -274,7 +274,7 @@ class ReynaSkill
 			double HealPerSecond = 6.25;
 			int damagePerSecond = 30;
 		}
-		public void SkillCurveBall()
+		public void skillCurveBall()
 		{
 			String skillName = "커브볼";
 			String skillExplanation = "던지면 휘어져 날아간 후 곧 폭발하는 섬광 구슬을 장착합니다."
@@ -285,7 +285,7 @@ class ReynaSkill
 			double blackOutDuration = 1.1;
 			double activationTime = 0.3;
 		}
-		public void SkillHotHands(int killCount)
+		public void skillHotHands(int killCount)
 		{
 			String skillName = "뜨거운 손";
 			String skillExplanation = "화염구를 장착합니다. 발사하면 일정 시간이 지나거나 땅에 닿은 후 폭발하는 화염구를 던집니다."
@@ -301,7 +301,7 @@ class ReynaSkill
 			double HealPerSecond = 12.5;
 			double flight = 1.5;
 		}
-		public void UltimateSkillRunItBack(int killCount, boolean death, boolean timeOut)
+		public void ultimateSkillRunItBack(int killCount, boolean death, boolean timeOut)
 		{
 			String skillName = "역습";
 			String skillExplanation = "즉시 피닉스의 위치에 표식을 놓습니다. 스킬 사용 도중 죽거나 지속시간이 끝나면 해당 위치에서 최대 체력으로 부활합니다.";
