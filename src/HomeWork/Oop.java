@@ -3,99 +3,125 @@ package HomeWork;
 
 public class Oop 
 {
-
+	public String callSign;
+	public String name;
+	public String nationality;
+	public String job;
+	public String group;
+	public int agentNumber;
+	public Skill[] skill;
+	
 }
-class Raze
-{
-	public String callSign = "레이즈";
-	public String name = "타야네 알베스";
-	public String nationality = "브라질";
-	public String job = "타격대";
-	public String group = "일반인";
-	public int agentNumber = 12;
-}
-class RazeSkill
-{
-	public void skillBoomRobot()
-	{
-		String skillName = "폭팔 로봇";
-		String skillExplanation = "폭발 로봇을 장착합니다. 발사하면 폭발 로봇이 지면에서 일직선으로 이동하며 벽을 만나면 튕겨 나옵니다."
-				                + "폭발 로봇의 정면 원뿔형 시야 안에 적이 포착되면 해당 적에게 돌진하며 폭발해 치명적인 피해를 입힙니다.";
-		String speech="폭탄 로봇 출동!, 가서 잡아!";
-		String skillType = "액티브";
-		int maxDamage= 80;
-		int[] rangeDamage = new int[80];
-		for(int i=0;i<rangeDamage.length;i++)
-		{
-			rangeDamage[i]=i+1;
-		}
-		int duration = 5;
-		int skillHp = 60;
-		int credit = 300;		
-	}
-	public void skillBlastPack()
-	{
-		String skillName = "폭팔 팩";
-		String skillExplanation ="표면에 부착되는 폭발 팩을 던집니다. 부착 후 다시 사용하면 팩이 폭발하며 적중한 대상에게 피해를 입히고 밀어냅니다.";
-		String speech = "폭탄,간다!, 폭탄,받아라!";
-		String skillType = "액티브";
-		int[] instantDamage = new int[11];
-		for(int i=4;i<instantDamage.length; i++)
-		{
-			instantDamage[i]=i+1;
-		}
-		int[] DamageAfterArming = new int[26];
-		for(int i=24;i<DamageAfterArming.length;i++)
-		{
-			DamageAfterArming[i]=i+1;
-		}
-		int objectTargetDamage = 75;
-		int duration = 5;
-		int skillHp = 20;
-		int credit = 200;		
-	}
-	public void skillPaintShells(int killCount)
-	{
-		String skillName = "페인트 탄";
-		String skillExplanation = "집속탄을 장착합니다. 발사하면 집속탄을 던집니다."
-				+ " 집속탄은 피해를 입히고 여러 개의 자탄을 퍼뜨립니다."
-				+ " 자탄은 각각의 범위 내에 있는 모든 대상에게 피해를 입힙니다.";
-		String speech= "수류탄!";
-		String skillType = "액티브";
-		int maxDamage = 55;
-		int[] rangeDamage=new int[56];
-		for(int i=0;i<rangeDamage.length;i++)
-		{
-			rangeDamage[i]=i+1;
-		}
-        if(killCount==2)
-        {
-        	System.out.println("스킬을 재사용 할수있습니다.");
-        }
-              
-	}
-	public void ultimateSkillShowStopper(int killCount)
-	{
-		String ultimateName = "대미 장식";
-		String skillExplanation ="로켓 발사기를 장착합니다. 발사하면 충돌 시 대량의 범위 피해를 입히는 로켓을 발사합니다.";
-		String allySpeech = "파티를 열어볼까? (Here comes the Party!)";
-		String enemySpeech = "폭탄 받아라! (Fire in the Hole!)";
-		String skillType = "궁극기";
-		int maxDamage = 150;
-		int[] rangeDamage = new int[151];
-		for(int i=0;i<rangeDamage.length;i++)
-		{
-			rangeDamage[i]=i+1;
-		}
-		if(killCount==8)
-		{
-			System.out.println("궁국기가 충전 되었습니다.");
-		}
+//class Skill
+//{
+//	String name;
+//	String description;
+//	String speech;
+//	String type;
+//	int credit;
+//	int skillHp;
+//	double duration;
+//}
+//int[] rangeDamage;
+//int[] instantDamage;
+//int[] damageAfterArming;
+//		this.instantDamage = instantDamage;
+//this.damageAfterArming = damageAfterArming;
+//this.objectTargetDamage = objectTargetDamage;
+//int[] instantDamage,
+//int[] damageAfterArming,
+//int objectTargetDamage
+//class Raze
+//{
+//	public String callSign = "레이즈";
+//	public String name = "타야네 알베스";
+//	public String nationality = "브라질";
+//	public String job = "타격대";
+//	public String group = "일반인";
+//	public int agentNumber = 12;
+//}
+//class RazeSkill
+//{
+//	public void skillBoomRobot()
+//	{
+//		String skillName = "폭팔 로봇";
+//		String skillExplanation = "폭발 로봇을 장착합니다. 발사하면 폭발 로봇이 지면에서 일직선으로 이동하며 벽을 만나면 튕겨 나옵니다."
+//				                + "폭발 로봇의 정면 원뿔형 시야 안에 적이 포착되면 해당 적에게 돌진하며 폭발해 치명적인 피해를 입힙니다.";
+//		String speech="폭탄 로봇 출동!, 가서 잡아!";
+//		String skillType = "액티브";
+//		int maxDamage= 80;
+//		int[] rangeDamage = new int[80];
+//		for(int i=0;i<rangeDamage.length;i++)
+//		{
+//			rangeDamage[i]=i+1;
+//		}
+//		int duration = 5;
+//		int skillHp = 60;
+//		int credit = 300;		
+//	}
+//	public void skillBlastPack()
+//	{
+//		String skillName = "폭팔 팩";
+//		String skillExplanation ="표면에 부착되는 폭발 팩을 던집니다. 부착 후 다시 사용하면 팩이 폭발하며 적중한 대상에게 피해를 입히고 밀어냅니다.";
+//		String speech = "폭탄,간다!, 폭탄,받아라!";
+//		String skillType = "액티브";
+//		int[] instantDamage = new int[11];
+//		for(int i=4;i<instantDamage.length; i++)
+//		{
+//			instantDamage[i]=i+1;
+//		}
+//		int[] damageAfterArming = new int[26];
+//		for(int i=24;i<damageAfterArming.length;i++)
+//		{
+//			damageAfterArming[i]=i+1;
+//		}
+//		int objectTargetDamage = 75;
+//		int duration = 5;
+//		int skillHp = 20;
+//		int credit = 200;		
+//	}
+//	public void skillPaintShells(int killCount)
+//	{
+//		String skillName = "페인트 탄";
+//		String skillExplanation = "집속탄을 장착합니다. 발사하면 집속탄을 던집니다."
+//				+ " 집속탄은 피해를 입히고 여러 개의 자탄을 퍼뜨립니다."
+//				+ " 자탄은 각각의 범위 내에 있는 모든 대상에게 피해를 입힙니다.";
+//		String speech= "수류탄!";
+//		String skillType = "액티브";
+//		int maxDamage = 55;
+//		int[] rangeDamage=new int[56];
+//		for(int i=0;i<rangeDamage.length;i++)
+//		{
+//			rangeDamage[i]=i+1;
+//		}
+//        if(killCount==2)
+//        {
+//        	System.out.println("스킬을 재사용 할수있습니다.");
+//        }
+//              
+//	}
+//	public void ultimateSkillShowStopper(int killCount)
+//	{
+//		String ultimateName = "대미 장식";
+//		String skillExplanation ="로켓 발사기를 장착합니다. 발사하면 충돌 시 대량의 범위 피해를 입히는 로켓을 발사합니다.";
+//		String allySpeech = "파티를 열어볼까? (Here comes the Party!)";
+//		String enemySpeech = "폭탄 받아라! (Fire in the Hole!)";
+//		String skillType = "궁극기";
+//		int maxDamage = 150;
+//		int[] rangeDamage = new int[151];
+//		for(int i=0;i<rangeDamage.length;i++)
+//		{
+//			rangeDamage[i]=i+1;
+//		}
+//		if(killCount==8)
+//		{
+//			System.out.println("궁국기가 충전 되었습니다.");
+//		}
+//
+//	}
+//
 
-	}
-
-
-}
+//}
 class Jett
 {
 	public String callSign = "제트";
@@ -261,7 +287,7 @@ class ReynaSkill
 	}
 	class PhoenixSkill
 	{
-		public void sKillBlaze()
+		public void skillBlaze()
 		{
 			String skillName = "불길";
 			String skillExplanation = "화염 장벽을 장착합니다."
