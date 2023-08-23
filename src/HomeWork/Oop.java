@@ -236,6 +236,7 @@ class ReynaSkill
 		String skillExplanation = "즉시 광란 상태가 되어 사격, 장착, 재장전 속도가 크게 증가합니다."
 				+ " 영혼 수확의 충전량을 무제한으로 얻습니다."
 				+ " 레이나가 처치하거나 레이나에게 피해를 입고 3초 이내에 죽은 적이 있으면 지속시간이 초기화됩니다.";
+		String skillType = "액티브";
 		int rateOfFire = 15;
 		int mounting = 25;
 		int reloadSpeed = 25;
@@ -269,6 +270,7 @@ class ReynaSkill
 					+ " 발사를 길게 누르면 조준점 방향으로 장벽 궤적을 바꿉니다."
 					+ " 자신이 발사한 화염 장벽에 닿으면 HP가 회복됩니다. ";
 			String speech = "벽 올라간다!"+"벽 생성!";
+			String skillType = "액티브";
 			int credit = 150;
 			int duration = 8;
 			double HealPerSecond = 6.25;
@@ -281,6 +283,7 @@ class ReynaSkill
 					+ " 발사하면 섬광 구슬이 왼쪽으로 휘어지며 폭발합니다. 이때 구슬을 바라보는 플레이어는 전부 실명합니다."
 					+ " 보조 공격 시 섬광 구슬이 오른쪽으로 휘어집니다.";
 			String speech = "펑이요!"+"눈 조심해!"+"눈 가려라!";
+			String skillType = "액티브";
 			int credit = 250;
 			double blackOutDuration = 1.1;
 			double activationTime = 0.3;
@@ -292,6 +295,7 @@ class ReynaSkill
 					+ " 폭발하는 지점에는 일정 시간 유지되는 화염 구역이 생성되어 적에게 피해를 입힙니다."
 					+ " 자신이 던진 화염구에 닿으면 HP가 회복됩니다.";
 			String speech = "조심해!,조심하라고!";
+			String skillType = "액티브";
 			if(killCount==2)
 			{
 				System.out.println("스킬을 재사용 할수있습니다.");
@@ -307,6 +311,7 @@ class ReynaSkill
 			String skillExplanation = "즉시 피닉스의 위치에 표식을 놓습니다. 스킬 사용 도중 죽거나 지속시간이 끝나면 해당 위치에서 최대 체력으로 부활합니다.";
 			String allySpeech = "으, 좋아, 가자! (Come on, Let's go!)";
 			String enemySpeech = "장난 끝이야, 넌 죽었어! (Jokes over, You're dead!)";
+			String skillType = "액티브";
 		    if(killCount==6)
 		    {
 		        System.out.println("궁극기가 충전되었습니다.");
