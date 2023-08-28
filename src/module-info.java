@@ -4,5 +4,5 @@
 /**
  * 
  */
-module Valorant {
+module Java4 {
 }
